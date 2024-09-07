@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW MAYAPUR - Brand Kit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Yeseva+One&display=swap');
+
+        :root {
+            /* Primary Colors */
+            --primary-color-1: #114a7f;
+            --primary-color-2: #159b90;
+            --primary-color-3: #ffcd64;
+            --primary-color-4: #b71252;
+
+            /* Secondary Colors */
+            --secondary-color-1: #578aba;
+            --secondary-color-2: #7ac4b2;
+            --secondary-color-3: #f7e7a5;
+            --secondary-color-4: #e8899e;
+
+            /* Background Colors */
+            --background-white: #fffcf3;
+            --background-light: #fffae9;
+            --background-neutral: #fff6da;
+            --background-dark-1: #646158;
+            --background-dark-2: #353229;
+
+            /* Button Colors */
+            --button-primary-bg: var(--primary-color-1);
+            --button-primary-hover: var(--secondary-color-1);
+            --button-secondary-bg: var(--primary-color-2);
+            --button-secondary-hover: var(--secondary-color-2);
+
+            /* Neutral Colors */
+            --neutral-1: #f1f3f4;
+            --neutral-2: #e7e7e7;
+            --neutral-3: #333333;
+            --neutral-white: #ffffff;
+
+            /* Text Colors */
+            --text-primary: #333333;
+            --text-secondary: #114a7f;
+            --text-inverse: #ffffff;
+
+            /* Link Colors */
+            --link-default: #ca95ff;
+            --link-hover: #976cc2;
+
+            /* Error & Success Colors */
+            --error-color: #b71252;
+            --success-color: #159b90;
+
+            /* Font Sizes */
+            --font-title: 50px;
+            --font-subtitle: 36px;
+            --font-heading: 30px;
+            --font-subheading: 24px;
+            --font-body: 16px;
+            --font-quote: 18px;
+            --font-caption: 12px;
+
+            /* Font Family */
+            --font-family-title: 'Yeseva One', serif;
+            --font-family-primary: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-white);
+            font-family: var(--font-family-primary);
+            padding: 20px;
+            color: var(--text-primary);
+        }
+
+        h1,
+        h2 {
+            color: var(--text-primary);
+            font-family: var(--font-family-title);
+            margin-bottom: 10px;
+        }
+
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--text-primary);
+            font-family: var(--font-family-primary);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: var(--font-title);
+        }
+
+        h2 {
+            font-size: var(--font-subtitle);
+        }
+
+        h3 {
+            font-size: var(--font-heading);
+        }
+
+        h4 {
+            font-size: var(--font-subheading);
+        }
+
+        p {
+            font-size: var(--font-body);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .color-box-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .color-box {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .color-box div {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+            border: 1px solid var(--neutral-2);
+            border-radius: 8px;
+        }
+
+        blockquote {
+            font-size: var(--font-quote);
+            font-family: var(--font-family-primary);
+            font-style: italic;
+            padding: 10px 20px;
+            background-color: var(--secondary-color-3);
+            border-left: 5px solid var(--primary-color-2);
+        }
+
+        .caption {
+            font-size: var(--font-caption);
+            color: var(--neutral-3);
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #159b90;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button.primary {
+            background-color: var(--button-primary-bg);
+            color: var(--neutral-white);
+        }
+
+        .button.primary:hover {
+            background-color: var(--button-primary-hover);
+        }
+
+        .button.secondary {
+            background-color: var(--button-secondary-bg);
+            color: var(--neutral-white);
+        }
+
+        .button.secondary:hover {
+            background-color: var(--button-secondary-hover);
+        }
+
+        .button.yellow {
+            background-color: var(--primary-color-3);
+            color: var(--neutral-3);
+        }
+
+        .button.yellow:hover {
+            background-color: var(--secondary-color-3);
+        }
+
+        /* For links */
+        a {
+            color: var(--link-default);
+            text-decoration: none;
+            font-size: var(--font-body);
+        }
+
+        a:hover {
+            color: var(--link-hover);
+        }
+
+        /* Typography Size Example */
+        .typography-example {
+            margin-top: 30px;
+        }
+
+        .typography-example h2 {
+            font-family: var(--font-family-title);
+            font-size: var(--font-subtitle);
+            margin-bottom: 10px;
+        }
+
+        .typography-example p {
+            font-family: var(--font-family-primary);
+            margin-bottom: 10px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            /* Space between the columns */
+            margin-top: 20px;
+        }
+
+        .section-dark,
+        .section-light {
+            flex: 1;
+            /* Ensures both sections take up equal width */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section-light {
+            background-color: var(--background-neutral);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--neutral-2);
+        }
+
+        .section-dark {
+            background-color: var(--background-dark-2);
+            color: var(--text-inverse);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .section-dark h3 {
+            color: var(--primary-color-3);
+        }
+
+
+        pre {
+            background-color: var(--background-neutral);
+            padding: 20px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border-left: 5px solid var(--primary-color-1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Brand Kit</h1>
+
+    <h2>Welcome to a <span style="color: var(--primary-color-4);">NEW MAYAPUR</span> Brand Kit!</h2>
+
+    <h3>Introduction</h3>
+
+    <div class="section-light" style="background-color: var(--background-light);">
+        <p>
+            The <strong>NEW MAYAPUR Brand Kit</strong> is designed to provide a consistent visual identity for the NEW
+            MAYAPUR brand, emphasizing rich colors, elegant typography, and thoughtfully chosen design elements. This
+            guide
+            serves as a reference for maintaining brand integrity across all digital and print materials. The color
+            palette
+            includes <strong>primary</strong>, <strong>secondary</strong>, <strong>neutral</strong>, and
+            <strong>background</strong> colors that represent the spirit and aesthetic of NEW MAYAPUR, blending bold and
+            soft tones to convey both tradition and modernity. Each color is carefully selected to evoke a sense of
+            elegance, warmth, and professionalism, while also providing flexibility for various design contexts.
+        </p>
+        <p>
+            In addition to colors, the typography reflects the essence of NEW MAYAPUR, using the <strong>Yeseva
+                One</strong>
+            font for titles and headings to create a bold and distinguished presence, paired with the
+            <strong>Montserrat</strong> font for body text to ensure clarity and readability. This brand kit also
+            features
+            button styles, light and dark section examples, and consistent spacing and
+            alignment principles to enhance user experience and maintain aesthetic harmony. Whether you are creating web
+            designs, marketing materials, or internal documents, this guide will help you apply the key visual elements
+            that
+            define the NEW MAYAPUR brand.
+        </p>
+
+        <div style="justify-content: flex-end;  display: flex;  gap: 10px; align-items: flex-end; ">
+            <span style="background-color: var(--neutral-2); padding: 10px; border-radius: 8px;">
+                For more details or inquiries, please contact <strong>Michael</strong> at
+                <strong>
+                    <a href="mailto:michaelwybraniec@me.com">michaelwybraniec@me.com</a>
+                </strong> or via
+                <strong>
+                    <a href="https://www.linkedin.com/in/michaelwybraniec/" target="_blank">LinkedIn</a>.
+                </strong>
+            </span>
+        </div>
+
+    </div>
+
+    <!-- Typography -->
+    <h3>Typography</h3>
+
+    <div class="typography-example section-light">
+        <h4>Sizes</h4>
+        <h1>This is the Title (50px) - Font "Yeseva One"</h1>
+        <h2>This is a Subtitle (36px) - Font "Yeseva One"</h2>
+        <h3>This is a Heading (30px) - Font "Montserrat"</h3>
+        <h4>This is a Subheading (24px) - Font "Montserrat"</h4>
+        <p>This is Body Text (16px), providing information about the style, color, and font in a typical paragraph
+            format. - Font "Montserrat"</p>
+        <blockquote>This is a Blockquote (18px) in Montserrat font. It emphasizes important statements or quotes. - Font
+            "Montserrat"
+        </blockquote>
+        <p class="caption">This is a Caption (12px), providing smaller annotations or explanations. - Font "Montserrat"
+        </p>
+    </div>
+
+    <h3>Colors</h3>
+    <div class="container">
+        <div class="section-light">
+
+            <!-- Primary Colors -->
+            <h4>Primary Colors</h4>
+            <div class="color-box">
+                <div style="background-color: var(--primary-color-1);"></div>
+                <span>Primary Color 1 - Dark Blue/Purple (#2d245a)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--primary-color-2);"></div>
+                <span>Primary Color 2 - Teal/Green (#159b90)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--primary-color-3);"></div>
+                <span>Primary Color 3 - Soft Yellow (#ffcd64)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--primary-color-4);"></div>
+                <span>Primary Color 4 - Dark Red (#b71252)</span>
+            </div>
+
+            <!-- Secondary Colors -->
+            <h4>Secondary Colors</h4>
+            <div class="color-box">
+                <div style="background-color: var(--secondary-color-1);"></div>
+                <span>Secondary Color 1 - Muted Lavender (#8769a6)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--secondary-color-2);"></div>
+                <span>Secondary Color 2 - Light Sea Green (#7ac4b2)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--secondary-color-3);"></div>
+                <span>Secondary Color 3 - Pale Yellow (#f7e7a5)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--secondary-color-4);"></div>
+                <span>Secondary Color 4 - Soft Pink (#e8899e)</span>
+            </div>
+            <!-- Background Colors -->
+            <h4>Background Colors</h4>
+            <div class="color-box">
+                <div style="background-color: var(--background-white);"></div>
+                <span>Background White (#fff8e2)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--background-light);"></div>
+                <span>Background Light (#fff8e2)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--background-neutral);"></div>
+                <span>Background Neutral (#fff2c6)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--background-dark-1);"></div>
+                <span>Background Dark 1 (#646158)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--background-dark-2);"></div>
+                <span>Background Dark 2 (#1e1d1a)</span>
+            </div>
+        </div>
+        <div class="section-light">
+            <!-- Button Colors -->
+            <h4>Button Colors</h4>
+            <div class="color-box">
+                <div style="background-color: var(--button-primary-bg);"></div>
+                <span>Button Primary Background (#b71252)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--button-primary-hover);"></div>
+                <span>Button Primary Hover (#e8899e)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--button-secondary-bg);"></div>
+                <span>Button Secondary Background (#159b90)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--button-secondary-hover);"></div>
+                <span>Button Secondary Hover (#7ac4b2)</span>
+            </div>
+            <!-- Neutral Colors -->
+            <h4>Neutral Colors</h4>
+            <div class="color-box">
+                <div style="background-color: var(--neutral-1);"></div>
+                <span>Neutral 1 - Light Gray (#f1f3f4)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--neutral-2);"></div>
+                <span>Neutral 2 - Medium Gray (#cccccc)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--neutral-3);"></div>
+                <span>Neutral 3 - Dark Gray (#333333)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--neutral-white);"></div>
+                <span>Neutral White (#ffffff)</span>
+            </div>
+            <!-- Text Colors -->
+            <h4>Text Colors</h4>
+            <div class="color-box">
+                <div style="background-color: var(--text-primary);"></div>
+                <span>Text Primary (#333333)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--text-secondary);"></div>
+                <span>Text Secondary (#2d245a)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--text-inverse);"></div>
+                <span>Text Inverse (#ffffff)</span>
+            </div>
+            <!-- Error & Success Colors -->
+            <h4>Error & Success Colors</h4>
+            <div class="color-box">
+                <div style="background-color: var(--error-color);"></div>
+                <span>Error Color (#b71252)</span>
+            </div>
+            <div class="color-box">
+                <div style="background-color: var(--success-color);"></div>
+                <span>Success Color (#159b90)</span>
+            </div>
+        </div>
+    </div>
+
+    <h3>Sections example</h3>
+    <div class="container">
+        <!-- Light Section Example -->
+        <div class="section-light">
+            <h3>Light Section Example</h3>
+            <p>This is an example of content on a light background, utilizing the primary text color for body text and a
+                neutral light background.</p>
+            <p>The colors and fonts listed here are central to the visual identity of NEW MAYAPUR. These elements create
+                a sense of continuity and cohesion across all branded materials.</p>
+            <p>The primary color palette draws from bold, contrasting hues like dark blue/purple and soft yellow,
+                designed to make an immediate and lasting impression. Supporting these are complementary secondary
+                colors, ranging from soft pastels to more muted tones, to provide versatility for various design
+                contexts.</p>
+            <div style="justify-content: flex-end;  display: flex;  gap: 10px; align-items: flex-end; ">
+                <button class="button primary">Primary Button</button>
+            </div>
+        </div>
+        <div class="section-light" style="background-color: var(--background-light);">
+            <h3>Light Section Example</h3>
+            <p>This is an example of content on a dark background with inverse text. The title here uses the soft
+                yellow from the primary palette to stand out clearly against the dark background.</p>
+            <p>This is an example of content on a dark background with inverse text. </p>
+            <p>NEW MAYAPUR is a brand deeply rooted in rich colors, distinctive typography, and a carefully selected
+                palette of shades that reflects both tradition and modernity. This guide outlines the fundamental
+                components for brand consistency. Each element, from colors to typography, is carefully curated to
+                reflect the unique identity of NEW MAYAPUR.</p>
+            <div style="justify-content: flex-end;  display: flex;  gap: 10px; align-items: flex-end; ">
+                <button class="button secondary">Secondary Button</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-dark">
+            <h3>Dark Section Example</h3>
+            <p>NEW MAYAPUR is a brand deeply rooted in rich colors, distinctive typography, and a carefully selected
+                palette of shades that reflects both tradition and modernity. This guide outlines the fundamental
+                components for brand consistency. Each element, from colors to typography, is carefully curated to
+                reflect the unique identity of NEW MAYAPUR.</p>
+            <p>This is an example of content on a dark background with inverse text. The title here uses the soft
+                yellow from the primary palette to stand out clearly against the dark background.</p>
+            <p>This is an example of content on a dark background with inverse text.</p>
+            <div style="justify-content: flex-end;  display: flex;  gap: 10px; align-items: flex-end; ">
+                <button class="button primary">OK</button>
+
+                <button class="button yellow">Yellow</button>
+            </div>
+        </div>
+        <div class="section-dark" style="background-color: var(--background-dark-1);">
+            <h3>Dark Section Example</h3>
+            <p>NEW MAYAPUR is a brand deeply rooted in rich colors, distinctive typography, and a carefully selected
+                palette of shades that reflects both tradition and modernity. This guide outlines the fundamental
+                components for brand consistency. Each element, from colors to typography, is carefully curated to
+                reflect the unique identity of NEW MAYAPUR.</p>
+            <p>This is an example of content on a dark background with inverse text. The title here uses the soft
+                yellow from the primary palette to stand out clearly against the dark background.</p>
+            <p>This is an example of content on a dark background with inverse text.</p>
+            <div style="justify-content: flex-end;  display: flex;  gap: 10px; align-items: flex-end; ">
+
+                <button class="button secondary">Secondary Button</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CSS -->
+    <h3>CSS</h3>
+    <pre>
+        :root {
+            /* Primary Colors */
+            --primary-color-1: #114a7f;
+            --primary-color-2: #159b90;
+            --primary-color-3: #ffcd64;
+            --primary-color-4: #b71252;
+
+            /* Secondary Colors */
+            --secondary-color-1: #578aba;
+            --secondary-color-2: #7ac4b2;
+            --secondary-color-3: #f7e7a5;
+            --secondary-color-4: #e8899e;
+
+            /* Background Colors */
+            --background-light: #fffae9;
+            --background-neutral: #fff6da;
+            --background-dark-1: #646158;
+            --background-dark-2: #353229;
+
+            /* Button Colors */
+            --button-primary-bg: var(--primary-color-1);
+            --button-primary-hover: var(--secondary-color-1);
+            --button-secondary-bg: var(--primary-color-2);
+            --button-secondary-hover: var(--secondary-color-2);
+
+            /* Neutral Colors */
+            --neutral-1: #f1f3f4;
+            --neutral-2: #cccccc;
+            --neutral-3: #333333;
+            --neutral-white: #ffffff;
+
+            /* Text Colors */
+            --text-primary: #333333;
+            --text-secondary: #114a7f;
+            --text-inverse: #ffffff;
+
+            /* Link Colors */
+            --link-default: #159b90;
+            --link-hover: #7ac4b2;
+
+            /* Error & Success Colors */
+            --error-color: #b71252;
+            --success-color: #159b90;
+
+            /* Font Sizes */
+            --font-title: 50px;
+            --font-subtitle: 36px;
+            --font-heading: 30px;
+            --font-subheading: 24px;
+            --font-body: 16px;
+            --font-quote: 18px;
+            --font-caption: 12px;
+
+            /* Font Family */
+            --font-family-title: 'Yeseva One', serif;
+            --font-family-primary: 'Montserrat', sans-serif;
+        }
+    </pre>
+
+    <div class="section-light" style="background-color: var(--background-light);">
+        <!-- Banners -->
+        <p
+            style="background-color: var(--primary-color-1); padding: 10px; border-radius: 8px; color: var(--neutral-1);">
+            Banner example --primary-color-1
+        </p>
+
+        <p
+            style="background-color: var(--primary-color-2); padding: 10px; border-radius: 8px; color: var(--neutral-1);">
+            Banner example --primary-color-2
+        </p>
+        <p
+            style="background-color: var(--primary-color-3); padding: 10px; border-radius: 8px; color: var(--neutral-1);">
+            Banner example --primary-color-2
+        </p>
+        <p
+            style="background-color: var(--primary-color-4); padding: 10px; border-radius: 8px; color: var(--neutral-1);">
+            Banner example --primary-color-4
+        </p>
+    </div>
+
+   
+    <div style="justify-content: flex-end;  display: flex; align-items: flex-end; margin-bottom: 200px; ">
+        <p >
+            For more details or inquiries, please contact <strong>Michael</strong> at
+            <strong>
+                <a href="mailto:michaelwybraniec@me.com">michaelwybraniec@me.com</a>
+            </strong> or via
+            <strong>
+                <a href="https://www.linkedin.com/in/michaelwybraniec/" target="_blank">LinkedIn</a>.
+            </strong>
+        </p>
+    </div>
+
+</body>
+
+</html>
